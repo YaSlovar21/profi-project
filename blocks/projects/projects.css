@@ -1,0 +1,72 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    max-width: 1240px;
+    margin: 65px auto 40px;
+    flex-wrap: wrap;
+}
+
+.projects__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 67px;
+    line-height: 1.19;
+    flex-wrap: wrap;
+}
+
+.projects__title {
+    font-size: 48px;
+    width: 397px;
+    margin: 0;
+    font-weight: 400;
+    flex-wrap: wrap;
+}
+
+.projects__description {
+    width: 710px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.projects__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.projects__item {
+    max-width: 353px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.projects__item-description {
+    width: 85%;
+    text-align: center;
+    line-height: 1.33;
+    font-size: 18px;
+}
+
+.projects__image {
+    width: 353px;
+    height: 229px;
+    transition: transform 0.9s ease-in-out;
+    overflow: hidden;
+}
+
+.projects__image_ufa-zaton {
+    background-image: url(../../images/ufa_zaton.png);
+}
+.projects__image_timashevsk-condit {
+    background-image: url(../../images/timashevsk_condit.png);
+}
+.projects__image_ufa-umn-dom {
+    background-image: url(../../images/ufa_umn_dom.png);
+}
+
+.projects__image:hover .projects__object{
+    transform: scale(1.05)
+  }

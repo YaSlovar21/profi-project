@@ -1,0 +1,9 @@
+.feynman__title {
+    text-align: center;
+    /*без указания ширины плывет верстка*/
+    width: 950px;
+    margin: 0 auto;
+    line-height: 1.15;
+    font-size: 62px;
+    font-weight: bold;
+  }

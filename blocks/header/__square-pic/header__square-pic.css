@@ -1,0 +1,9 @@
+.header__square-pic {
+    position: absolute;
+    right: 111px;
+    top: 30px;
+    height: 700px;
+    width: 700px;
+    background-image: url(../../../images/Subtract.png);
+    background-size: cover;
+  }

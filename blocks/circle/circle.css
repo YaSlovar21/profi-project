@@ -1,0 +1,46 @@
+.circle {
+    min-height: 790px;
+    background: url(../../images/circle_svg1.svg) center no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.circle__feat {
+    font-size: 24px;
+    list-style-type: none;
+    max-width: 291px;
+    font-weight: 200;
+    position: absolute;
+}
+
+.circle__feat:nth-child(1) {
+    top:95px;
+    left:193px;
+}
+.circle__feat:nth-child(2) {
+    top:326px;
+    left:50px;
+}
+
+.circle__feat:nth-child(3) {
+    top:609px;
+    left:162px;
+}
+
+.circle__feat:nth-child(4) {
+    top:95px;
+    right:193px;
+}
+.circle__feat:nth-child(5) {
+    top:326px;
+    right:50px;
+}
+
+.circle__feat:nth-child(6) {
+    top:609px;
+    right:162px;
+}
+
+
