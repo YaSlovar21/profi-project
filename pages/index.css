@@ -101,6 +101,9 @@
 @import url(../blocks/projects/projects.css);
 @import url(../blocks/plates/plates.css);
 @import url(../blocks/about/about.css);
+@import url(../blocks/animate/animate.css);
+
+
 
 @import url(../blocks/photo-grid/photo-grid.css);
 @import url(../blocks/photo-grid/__item/photo-grid__item.css);
