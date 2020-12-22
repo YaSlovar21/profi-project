@@ -4,7 +4,7 @@
     right: 100px;
     /*height: 608px;
     width: 765px;*/
-    animation: main-illustration .5s ease;
+    
    /* transform: translateX(0px);*/
   }
 
@@ -15,5 +15,14 @@
   }
   to {
     transform:translateX(10px);
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .header__main-illustration {
+    /*top: 45%; */
+    /* top: 40%; */
+    right: 0;
+    width: 60%;
   }
 }

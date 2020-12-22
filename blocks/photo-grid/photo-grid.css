@@ -16,8 +16,14 @@
     gap: 10px;
     z-index: 1;
     top:50px;
+    
 }
 
+@media screen and (max-width:800px) {
+    .photo-grid {
+        grid-template-columns: repeat(4, 1fr) 2fr 0px;
+    }
+}
 
 
 /*

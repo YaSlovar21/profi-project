@@ -7,3 +7,18 @@
     font-size: 62px;
     font-weight: bold;
   }
+
+@media screen and (max-width:1024px) {
+  .feynman__title {
+    width: 90%;
+    font-size: 36px;
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+  .feynman__title {
+    font-size: 28px;
+    width: 90%;
+  }
+}

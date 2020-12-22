@@ -5,3 +5,10 @@
     margin: 0;
     width: 862px;
   }
+
+  @media screen and (max-width:1024px) {
+    .khan__title {
+      width: 90%;
+      font-size: 28px;
+    }
+  }

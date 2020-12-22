@@ -6,3 +6,15 @@
     background-size: 682px 455px;
     background: #F2F2F2 url(../../images/feynman2.png) no-repeat bottom left;
   }
+
+  @media screen and (max-width:1024px) {
+    .feynman {
+    background-size: 450px;
+    }
+  }
+
+  @media screen and (max-width:600px) {
+    .feynman {
+    background-size: 373px;
+    }
+  }

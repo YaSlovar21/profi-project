@@ -3,9 +3,18 @@
     height: 100vh;
     min-height: 600px;
     max-height: 756px;
-    background-color: #F2F2F2;
+    /*background-color: #F2F2F2;*/
+    
+    background: radial-gradient(50% 101.03% at 23.75% 50%, rgba(242, 242, 242, 0.27) 0%, #F2F2F2 43.23%);
     /* выше установили ограничения для секции */
     display: flex;
     align-items: center;
     overflow: hidden;
+  }
+
+
+  @media screen and (max-width: 1025px) {
+    .header {
+      height: 400px;
+    }
   }

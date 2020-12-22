@@ -3,5 +3,12 @@
     font-size: 24px;
     font-weight: normal;
     margin: 50px 0 0 0;
-    width: 892px;
+    
   }
+
+  @media screen and (min-width:1024px) {
+    .khan__quote {
+      width: 892px;
+    }
+  }
+
