@@ -5,19 +5,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Пластинчатые теплообменники от производителя | ООО "Профи"</title>
   <link rel="stylesheet" href="pages/index.css">
+  <link rel="stylesheet" href="styles/animate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
   <div class="page">
     <header class="header">
-      <img class="logo logo_place_header" src="images/logo-to-2_place_header.svg" alt="Профи">
-      <h1 class="header__title">Пластинчатые теплообменники</h1>
+      <img class="logo logo_place_header" src="images/tm_fictiv.svg" alt="Профи">
+      <h1 class="header__title wow animate__bounceInLeft" data-wow-duration="2s" data-wow-delay=".5s">Пластинчатые теплообменники</h1>
       <p class="header__subtitle">Отечественные пластинчатые теплообменники и пластины от производителя ООО "Термоблок"<br> с доставкой по России <a class="header__link link-beauty" href="#">Подробнее &#8594;</a></p>
       <div class="header__square-pic rotation"></div>
       <img class="header__main-illustration" src="images/header-to-image.png" alt="Опять двойка">
     </header>
     <main class="content">
+<!--
+      <style>
+        nav {
+          margin: 0;
+          background: #f2f2f2;
+          width: 100%;
+        }
+        ul {
+
+        }
+        .topmenu > li {
+          padding: 10px 15px;
+          margin: 0;
+          text-align: center;
+          position: relative;
+        }
+        /*.topmenu > li:last-child {
+          margin-right: 0;
+        }*/
+        a {
+
+          text-decoration: none;
+          outline: none;
+          transition: .5s linear;
+          position: relative;
+          margin: 0 auto;
+        }
+        a::after {
+          position: absolute;
+          content: '';
+          height: 3.5px;
+          bottom: 1px;
+          left: 0;
+          width: 100%;
+          background-color: #ef9348;
+          opacity: 0;
+        }
+        a:hover::after {
+          opacity: 0.8;
+          transition: all .4s ease-in;
+          transform: translateY(7px);
+        }
+        .fa {
+          font-family: "FontAwesome";
+          color: inherit;
+          padding-left: 10px;
+        }
+        .submenu {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          z-index: 10;
+          -webkit-transition: 0.5s ease-in-out;
+          -moz-transition: 0.5s ease-in-out;
+          -o-transition: 0.5s ease-in-out;
+          transition: 0.5s ease-in-out;
+        }
+        .four ul {
+          display: flex;
+          list-style: none; 
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+          align-content: center;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .four .submenu {
+          -webkit-transform: scaleY(0);
+          -ms-transform: scaleY(0);
+          transform: scaleY(0);
+          -webkit-transform-origin: 0 0;
+          -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+          background: #FFAB51;
+        }
+        .four ul li:hover .submenu {
+          -webkit-transform: scaleY(1);
+          -ms-transform: scaleY(1);
+          transform: scaleY(1);
+        }
+        .four ul a {
+          color: #000000;
+          font-size: 18px;
+        }
+      </style>
+      <nav class="four">
+        <ul class="topmenu">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Продукция</a></li>
+          <li><a href="#">Сервис<i class="fa fa-angle-down">v</i></a>
+            <ul class="submenu">
+              <li style="display: flex;align-items: center;"><a href="">Item 1</a></li>
+              <li style="display: flex;align-items: center;"><a href="">Item 2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Металлообработка</a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Цены</a></li>
+        </ul>
+      </nav>
+      -->
       <section class="description">
-        <div class="two-columns">
+        <div class="two-columns wow animate__fadeInDown" data-wow-offset="350">
           <h2 class="two-columns__brief">Гарантии качества пластинчатых теплообменников</h2>
           <div class="two-columns__main-text">
             <p class="two-columns__paragraph">На базе пластин собственного производства изготавливаются теплообменники торговой марки <span class="two-columns__span-accent">“Теплохит”</span> для различных отраслей: жилично-коммунальное хозяйство, пищевая промышленность и прочие технологические процессы теплообмена.  Производство теплообменников 100% локализовано на территории предприятия.</p>
@@ -30,13 +139,13 @@
         <h2 class="section-title">Основные премиущества</h2>
         <p class="section-subtitle">Пластинчатых теплообменников Теплохит</p>
         <div class="circle">
-          <img src="images/plastinchatii_teploobmennik_details.png" alt="Деталировка">
-          <ul>
-            <li class="circle__feat">Направляющие балки из нержавеющей стали</li>
+          <img class="circle__image"src="images/plastinchatii_teploobmennik_details.png"  alt="Деталировка">
+          <ul class="circle__list">
+            <li class="circle__feat wow animate__fadeInDown" data-wow-offset="200" >Направляющие балки из нержавеющей стали</li>
             <li class="circle__feat">Стальные шпильки из стали 40Х с накатной резьбой</li>
-            <li class="circle__feat">Бесплатная комплектация ответными фланцами</li>
+            <li class="circle__feat wow animate__fadeInDown" data-wow-offset="200" >Бесплатная комплектация ответными фланцами</li>
             <li class="circle__feat">Надежная конструкция рамы</li>
-            <li class="circle__feat">Удлиненная гайка из стали 40Х с повышенным запасом прочности</li>
+            <li class="circle__feat wow animate__fadeInDown" data-wow-offset="200" >Удлиненная гайка из стали 40Х с повышенным запасом прочности</li>
             <li class="circle__feat">Гидравлические испытания каждого теплообменника</li>
           </ul>
         </div>
@@ -67,16 +176,16 @@
     <p class="projects__description">С 1993 года реализованы поставики во все регионы России. Вы можете ознакомиться с примерами проектов.</p>
   </div>
   <div class="projects__items">
-    <div class="projects__item">
-      <div class="project__image"><img class="projects__object" src="images/ufa_zaton.png"></div>
+    <div class="projects__item wow animate__fadeInUp" data-wow-delay=".5s">
+      <img class="projects__image" src="images/ufa_zaton.png">
       <p class="projects__item-description">Котельная в квартале 34, г. Уфа, жилой район «Затон-Восточный»</p>
     </div>
-    <div class="projects__item">
-      <img src="images/timashevsk_condit.png">
+    <div class="projects__item wow animate__fadeInUp" data-wow-delay="1s">
+      <img  class="projects__image"  src="images/timashevsk_condit.png">
       <p class="projects__item-description">Кондитерский комбинат «Кубань», г. Тимашевск, Краснодарский край</p>
     </div>
-    <div class="projects__item">
-      <img src="images/ufa_umn_dom.png">
+    <div class="projects__item wow animate__fadeInUp" data-wow-delay="1.5s">
+      <img  class="projects__image" src="images/ufa_umn_dom.png">
       <p class="projects__item-description">БИТП Новый умный дом в г. Уфа, ул. Злобина, 31</p>
     </div>
   </div>
@@ -95,7 +204,7 @@
           <p class="plates__description-text">Предприятие “Термоблок” разрабатывает и изготавливает пластины и уплотнения. Мы являемся единственным в России производителем пластин ДУ250.</p>
           <p class="plates__description-text">Широкий типоразмерный ряд производимых пластин позволяет изготавливать теплообменники от 5 кВт до 25 мВт как для небольших жилых домов, так и для целых микрорайонов.</p>
         </div>
-        <div class="plates__interactive">
+        <div class="wow plates__interactive">
         <div class="illustration__stripe-blue"></div>
         <svg style="margin-top:30px;transform: skewY(-20deg);"width="933" height="320" viewBox="0 0 933 320" fill="none" xmlns="http://www.w3.org/2000/svg">
            <style>
@@ -213,7 +322,7 @@
             <br>- полные технические характеристики</p>
           <div class="khan__book-container">
             <img src="images/raschet-kp.png" class="khan__book-pic" alt="Коммерческое предложение по пластинчатому теплообменнику">
-            <a class="khan__buy-link link-beauty" href="#">Отправить заявку на расчёт  &#8594;</a>
+            <a class="khan__buy-link link-beauty wow animate__fadeInRight" data-wow-duration="1s" data-wow-offset="200" href="#">Отправить заявку на расчёт  &#8594;</a>
           </div>
           <div class="khan__types-container">
             <ul class="khan__list">
@@ -288,10 +397,10 @@
       <section class="about">
           <div class="about__container">
             <img src="images/doc_profi.png" class="about__doc">
-            <div class="about__description">
+            <div class="about__description wow animate__fadeInRight" data-wow-duration="1.5s" data-wow-offset="10">
               <div class="about__description-text">
                 <p class="about__description-paragraph"><span class="two-columns__span-accent">ООО “Профи”</span> - сертифицированный партнер производителя ООО “Термоблок”. Мы предлагаем выгодные условия сотрудничества и гибкие цены.</p>
-                <p class="about__description-paragraph">Партнерская и бонусная программа <a href="#" class="about__link link-beauty">Подробнее &#8594;</a></p>
+                <p class="about__description-paragraph">Партнерская и бонусная программа <a href="#" class="about__link link-beauty wow animate__bounce" data-wow-delay="2s">Подробнее &#8594;</a></p>
               </div>
               <img src="images/figures_termoblok.svg" class="about__description-counts">
             </div>
@@ -315,7 +424,7 @@
       </section>-->
 
       <section>
-        <h2 class="section-title_size_m">Фотогалерея производства теплообменников</h2>
+        <h2 class="section-title">Фотогалерея производства теплообменников</h2>
         <div class="photo-grid">
           <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_right" src="images/prod-big-1.jpg"></figure>
           <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_center" src="images/metall-cut-big.png"></figure>
@@ -347,9 +456,9 @@
       </section>-->
     <section class="up-footer">
       <ul class="up-footer__list">
-        <li class="up-footer__list-item">Рассчитать теплообменник</li>
-        <li class="up-footer__list-item">Заявка на обратный звонок</li>
-        <li class="up-footer__list-item">Скачать опросный лист</li>
+        <li class="up-footer__list-item  wow animate__slideInUp" data-wow-duration="1s" data-wow-delay=".4s">Рассчитать теплообменник</li>
+        <li class="up-footer__list-item  wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="1.2s">Заявка на обратный звонок</li>
+        <li class="up-footer__list-item  wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="2.0s">Скачать опросный лист</li>
       </ul>
     </section>
     </main>
@@ -393,9 +502,13 @@
         height: 2000px;
       }
     </style>
-    <div class="progress"><div></div>
-    <p class="ppx"></p></div>
+    <!--<div class="progress"><div></div>
+    <p class="ppx"></p></div>-->
   </div>
+  <script src="js/wow.min.js"></script>
+   <script>
+   new WOW().init();
+   </script>
   <script>
     
     let phrases = [
@@ -409,7 +522,7 @@
     let button3 = document.querySelector('#khan_3');
     let image = document.querySelector('.khan__book-pic');
     
-    let hides_block = document.querySelector('.plates__interactive');
+    /*let hides_block = document.querySelector('.plates__interactive');
     let hide = document.querySelector('.no-display');
     let hideFromTop = hides_block.getBoundingClientRect().top;
     console.log(hideFromTop);
@@ -427,7 +540,6 @@
           window.removeEventListener('scroll', showOnScroll, false);
       }
     }
-    window.addEventListener('scroll', showOnScroll,false)
 
 /*
     var hides = document.querySelectorAll('.no-display'), index, item;
@@ -481,5 +593,6 @@
       ppx.innerHTML = max + ' ' + pageYOffset;
     });*/
   </script>
+   
 </body>
 </html>
