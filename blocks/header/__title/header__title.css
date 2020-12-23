@@ -6,6 +6,8 @@
     margin-left: 64px;
     width: 730px;
     z-index: 1;
+
+    animation: bounceInLeft 2s linear;
   }
   @media screen and (max-width: 1025px) {
     .header__title {
