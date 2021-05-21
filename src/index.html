@@ -11,11 +11,11 @@
 <body>
   <div class="page">
     <header class="header">
-      <img class="logo logo_place_header" src="images/tm_fictiv.svg" alt="Профи">
+      <img class="logo logo_place_header" src="<%=require('./images/tm_fictiv.svg')%>" alt="Профи">
       <h1 class="header__title">Пластинчатые теплообменники</h1>
       <p class="header__subtitle">Отечественные пластинчатые теплообменники и пластины от производителя ООО "Термоблок"<br> с доставкой по России <a class="header__link link-beauty" href="#">Подробнее &#8594;</a></p>
       <div class="header__square-pic rotation"></div>
-      <img class="header__main-illustration" src="images/header-to-image.png" alt="Опять двойка">
+      <img class="header__main-illustration" src="<%=require('./images/header-to-image.png')%>" alt="Опять двойка">
     </header>
     <main class="content">
 
@@ -33,7 +33,7 @@
         <h2 class="section-title">Основные премиущества</h2>
         <p class="section-subtitle">Пластинчатых теплообменников Теплохит</p>
         <div class="circle">
-          <img class="circle__image"src="images/plastinchatii_teploobmennik_details.png"  alt="Деталировка">
+          <img class="circle__image"src="<%=require('./images/plastinchatii_teploobmennik_details.png')%>"  alt="Деталировка">
           <ul class="circle__list">
             <li class="circle__feat wow animate__fadeInDown" data-wow-offset="200" >Направляющие балки из нержавеющей стали</li>
             <li class="circle__feat">Стальные шпильки из стали 40Х с накатной резьбой</li>
@@ -53,15 +53,15 @@
         </div>
         <div class="projects__items">
           <div class="projects__item wow animate__fadeInUp" data-wow-delay=".5s">
-            <img class="projects__image" src="images/ufa_zaton.png">
+            <img class="projects__image" src="<%=require('./images/ufa_zaton.png')%>">
             <p class="projects__item-description">Котельная в квартале 34, г. Уфа, жилой район «Затон-Восточный»</p>
           </div>
           <div class="projects__item wow animate__fadeInUp" data-wow-delay="1s">
-            <img  class="projects__image"  src="images/timashevsk_condit.png">
+            <img  class="projects__image"  src="<%=require('./images/timashevsk_condit.png')%>">
             <p class="projects__item-description">Кондитерский комбинат «Кубань», г. Тимашевск, Краснодарский край</p>
           </div>
           <div class="projects__item wow animate__fadeInUp" data-wow-delay="1.5s">
-            <img  class="projects__image" src="images/ufa_umn_dom.png">
+            <img  class="projects__image" src="<%=require('./images/ufa_umn_dom.png')%>">
             <p class="projects__item-description">БИТП Новый умный дом в г. Уфа, ул. Злобина, 31</p>
           </div>
         </div>
@@ -162,21 +162,15 @@
                 <div class="swiper-slide">
                   <!--<img data-src="path/to/picture-1.jpg" class="swiper-lazy" />
                   <div class="swiper-lazy-preloader"></div>-->
-                  <div class="swiper-zoom-container">
-                    <img src="images/raschet-kp.png" class="khan__book-pic" alt="Коммерческое предложение по пластинчатому теплообменнику">
-                  </div>
+                    <img src="<%=require('./images/raschet-kp.png')%>" class="khan__book-pic" alt="Коммерческое предложение по пластинчатому теплообменнику">
                 </div>
                 <div class="swiper-slide">
-                  <div class="swiper-zoom-container">
-                    <img data-src="images/raschet-sp.png" class="khan__book-pic swiper-lazy" alt="Коммерческое предложение по пластинчатому теплообменнику">
-                  </div>
-                  <div class="swiper-lazy-preloader"></div>
+                    <img src="<%=require('./images/raschet-sp.png')%>" class="khan__book-pic" alt="Коммерческое предложение по пластинчатому теплообменнику1">
+                  <!--<div class="swiper-lazy-preloader"></div>-->
                 </div>
                 <div class="swiper-slide">
-                  <div class="swiper-zoom-container">
-                    <img data-src="images/raschet-teh-dann.png" class="khan__book-pic swiper-lazy" alt="Коммерческое предложение по пластинчатому теплообменнику">
-                  </div>
-                  <div class="swiper-lazy-preloader"></div>
+                    <img src="<%=require('./images/raschet-teh-dann.png')%>" class="khan__book-pic" alt="Коммерческое предложение по пластинчатому теплообменнику2">
+                  <!--<div class="swiper-lazy-preloader"></div>-->
                 </div>
               </div>
             </div>
@@ -237,13 +231,13 @@
 
       <section class="about">
           <div class="about__container">
-            <img src="images/doc_profi.png" class="about__doc">
+            <img src="<%=require('./images/doc_profi.png')%>" class="about__doc">
             <div class="about__description wow animate__fadeInRight" data-wow-duration="1.5s" data-wow-offset="10">
               <div class="about__description-text">
                 <p class="about__description-paragraph"><span class="two-columns__span-accent">ООО “Профи”</span> - сертифицированный партнер производителя ООО “Термоблок”. Мы предлагаем выгодные условия сотрудничества и гибкие цены.</p>
                 <p class="about__description-paragraph">Партнерская и бонусная программа <a href="#" class="about__link link-beauty wow animate__bounce" data-wow-delay="2s">Подробнее &#8594;</a></p>
               </div>
-              <img src="images/figures_termoblok.svg" class="about__description-counts">
+              <img src="<%=require('./images/figures_termoblok.svg')%>" class="about__description-counts">
             </div>
           </div>
 
@@ -252,20 +246,20 @@
       <section>
         <h2 class="section-title">Фотогалерея производства теплообменников</h2>
         <div class="photo-grid">
-          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_right" src="images/prod-big-1.jpg"></figure>
-          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_center" src="images/metall-cut-big.png"></figure>
-          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_right" src="images/grospiron.JPG"></figure>
-          <figure class="photo-grid__item"><img class="photo-grid__image" src="images/press-plast-ready.jpg"></figure>
-          <figure class="photo-grid__item"><img class="photo-grid__image" src="images/press-plast-zag.jpg"></figure>
-          <figure class="photo-grid__item"><img class="photo-grid__image" src="images/metall-cut.jpg"></figure>
-          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_center" src="images/3-to-small-to-big.jpg"></figure>
+          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_right" src="<%=require('./images/prod-big-1.jpg')%>"></figure>
+          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_center" src="<%=require('./images/metall-cut-big.png')%>"></figure>
+          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_right" src="<%=require('./images/grospiron.jpg')%>"></figure>
+          <figure class="photo-grid__item"><img class="photo-grid__image" src="<%=require('./images/press-plast-ready.jpg')%>"></figure>
+          <figure class="photo-grid__item"><img class="photo-grid__image" src="<%=require('./images/press-plast-zag.jpg')%>"></figure>
+          <figure class="photo-grid__item"><img class="photo-grid__image" src="<%=require('./images/metall-cut.jpg')%>"></figure>
+          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_center" src="<%=require('./images/3-to-small-to-big.jpg')%>"></figure>
         </div>
       </section>
     <section class="up-footer">
       <ul class="up-footer__list">
-        <li class="up-footer__list-item  wow animate__slideInUp" data-wow-duration="1s" data-wow-delay=".4s">Рассчитать теплообменник</li>
-        <li class="up-footer__list-item  wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="1.2s">Заявка на обратный звонок</li>
-        <li class="up-footer__list-item  wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="2.0s">Скачать опросный лист</li>
+        <li class="up-footer__list-item wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Рассчитать теплообменник</li>
+        <li class="up-footer__list-item wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="1.2s">Заявка на обратный звонок</li>
+        <li class="up-footer__list-item wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="2.0s">Скачать опросный лист</li>
       </ul>
     </section>
     </main>
@@ -295,6 +289,14 @@
     </footer>
   </div>
 
-   
+  <div class="popup popup_darked popup-viewport">
+    <div class="popup__container">
+        <button class="popup__button-close link-beauty" type="button"></button>    
+        <div class="popup__image-view">
+            <img class="popup__image" alt="картинка под загрузку" src="">
+            <p class="popup__image-description"></p>
+        </div>
+    </div>
+  </div>   
 </body>
 </html>
