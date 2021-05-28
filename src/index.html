@@ -52,6 +52,7 @@
           <p class="projects__description">С 1993 года реализованы поставики во все регионы России. Вы можете ознакомиться с примерами проектов.</p>
         </div>
         <div class="projects__items">
+          <!--
           <div class="projects__item wow animate__fadeInUp" data-wow-delay=".5s">
             <img class="projects__image" src="<%=require('./images/ufa_zaton.png')%>">
             <p class="projects__item-description">Котельная в квартале 34, г. Уфа, жилой район «Затон-Восточный»</p>
@@ -64,6 +65,7 @@
             <img  class="projects__image" src="<%=require('./images/ufa_umn_dom.png')%>">
             <p class="projects__item-description">БИТП Новый умный дом в г. Уфа, ул. Злобина, 31</p>
           </div>
+          -->
         </div>
       </section>
 
@@ -297,6 +299,12 @@
             <p class="popup__image-description"></p>
         </div>
     </div>
-  </div>   
+  </div> 
+  <template id="project-template">
+    <div class="projects__item">
+      <img class="projects__image" src="">
+      <p class="projects__item-description">Котельная в квартале 34, г. Уфа, жилой район «Затон-Восточный»</p>
+    </div>
+  </template>
 </body>
 </html>

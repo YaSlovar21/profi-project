@@ -1,11 +1,50 @@
 import Swiper from 'swiper/bundle';
 import WOW from 'wow.js';
 
+import Section from '../js/components/Section.js';
+import Card from '../js/components/Card.js';
+
+//import FormValidator from '../js/components/FormValidator.js';
+//import PopupWithForm from '../js/components/PopupWithForm.js';
+//import PopupConfirm from '../js/components/PopupConfirm.js';
+import PopupWithImage from '../js/components/PopupWithImage.js';
+
 import 'swiper/swiper-bundle.css';
 import 'animate.css';
-
-
 import '../pages/index.css';
+
+import {
+  initialProjects,
+  cardsContainerSelector,
+  cardTemplateSelector,
+  popupImageSelector,
+} from '../js/utils/constants.js';
+
+
+
+function createCard(item) {
+  const card = new Card({
+    name: item.name,
+    link: item.link,
+    handleImageClick: () => {
+
+    },
+  }, cardTemplateSelector);
+  const cardToAdd = card.generateCard()
+  return cardToAdd;
+}
+
+const projectList = new Section({
+  data: initialProjects,
+  renderer: (item) => {
+    //в этой точке знаем все данные карточки
+    //const card = createCard(item.name, item.link, likesSum, item.owner._id, item._id, item.likesArr);
+    const card = createCard(item);
+    projectList.setItem(card);
+  }
+}, cardsContainerSelector);
+
+projectList.renderItems();
 
 const wowAnimation = new WOW({
   boxClass:     'wow',      // animated element css class (default is wow)
@@ -17,7 +56,6 @@ const wowAnimation = new WOW({
   resetAnimation: true,     // reset animation on end (default is true)
 });
 wowAnimation.init();
-
 
 const commercOffersSlider  = new Swiper('.khan__book-container', {
         direction: 'horizontal',
@@ -56,23 +94,5 @@ const commercOffersSlider  = new Swiper('.khan__book-container', {
           }
         },
 });
-
 commercOffersSlider.init();
-
-const popupImageSelector = '.popup-viewport';
-const projectToPopupSelector = '.projects-item';
-/*
-Array.from(document.querySelectorAll(projectToPopupSelector))
-  .forEach(item => {
-    let itemImg
-    item.addEventListener('click')
-  })
-*/
-
-const popupProject = new PopupWithImage({
-    imageInPopupSelector: '', 
-    imageDescInPopupSelector :'',
-  },
-  popupImageSelector
-);
 
