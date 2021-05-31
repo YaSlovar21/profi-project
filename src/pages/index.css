@@ -132,3 +132,9 @@
 @import url(../blocks/popup/__image-description/popup__image-description.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/_darked/popup_darked.css);
+
+@import url(../blocks/popup/__to-info/popup__to-info.css); /*контейнер для ТО + описание со ссылками справа*/
+@import url(../blocks/popup/__to-img/popup__to-img.css);
+@import url(../blocks/popup/__desc-container/popup__desc-container.css);
+
+@import url(../blocks/list/list.css);

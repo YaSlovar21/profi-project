@@ -3,11 +3,10 @@ export default class Card {
         this._name = name;
         this._link = link;
         this._cardSelector = cardSelector;
-        this._handleImageClick = handleImageClick;
+        this._handleImageClick = handleImageClick; //функция коллбэк открытия попап
     }
     
     _getTemplate() {
-        console.log(document.querySelector('#project-template'));
         const cardElement = document
           .querySelector(this._cardSelector)
           .content

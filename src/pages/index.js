@@ -5,8 +5,9 @@ import Section from '../js/components/Section.js';
 import Card from '../js/components/Card.js';
 
 //import FormValidator from '../js/components/FormValidator.js';
-//import PopupWithForm from '../js/components/PopupWithForm.js';
+import PopupWithForm from '../js/components/PopupWithForm.js';
 //import PopupConfirm from '../js/components/PopupConfirm.js';
+import PopupWithHeatEx from '../js/components/PopupWithHeatEx.js';
 import PopupWithImage from '../js/components/PopupWithImage.js';
 
 import 'swiper/swiper-bundle.css';
@@ -14,20 +15,39 @@ import 'animate.css';
 import '../pages/index.css';
 
 import {
+  //данные проектов
   initialProjects,
-  cardsContainerSelector,
-  cardTemplateSelector,
-  popupImageSelector,
-} from '../js/utils/constants.js';
+  initialHeatEx,
+  
+  cardsContainerSelector, //селектор секции куда грузятся карточки 
+  cardTemplateSelector,   //шаблон карточки
 
+  popupImageSelector,     //попап с картинкой (селектор)
+  callBackPopupSelector,  //попап с формой обратного звонка (селектор)
+  popupWithToSelector,    //попап с теплообменником
+
+  //кнопки открытия модальных окон
+  callBackPopupOpenButton,
+  popupWithSertifOpenButton,
+  
+  platesSvg,
+
+  //конфиги
+  popupImageSelectorsCongig,
+  popupToConfig,
+} from '../js/utils/constants.js';
 
 
 function createCard(item) {
   const card = new Card({
     name: item.name,
     link: item.link,
-    handleImageClick: () => {
-
+    handleImageClick: (desc, link) => {
+      //(desc, link) передаем во внутреннем методе карточки
+      popupImage.open({
+        link: link,
+        name: desc,
+      });      
     },
   }, cardTemplateSelector);
   const cardToAdd = card.generateCard()
@@ -38,13 +58,48 @@ const projectList = new Section({
   data: initialProjects,
   renderer: (item) => {
     //в этой точке знаем все данные карточки
-    //const card = createCard(item.name, item.link, likesSum, item.owner._id, item._id, item.likesArr);
+    //item - объект карточки со всеми свойствами
     const card = createCard(item);
     projectList.setItem(card);
   }
 }, cardsContainerSelector);
-
 projectList.renderItems();
+
+
+const popupImage = new PopupWithImage(popupImageSelectorsCongig, popupImageSelector);
+const popupHeatEx = new PopupWithHeatEx(popupToConfig, popupWithToSelector);
+
+const popupCallBack = new PopupWithForm({
+  formSubmitHandler: (formCallbackData) => {
+
+  },
+  formCleanError: () => {
+
+  },
+}, callBackPopupSelector)
+
+
+popupImage.setEventListeners();
+popupCallBack.setEventListeners();
+popupHeatEx.setEventListeners();
+
+//навешиваем слушатели на элементы сайта
+callBackPopupOpenButton.addEventListener("click", () => {
+  popupCallBack.open();
+})
+
+popupWithSertifOpenButton.addEventListener("click", () => {
+  popupImage.open({
+    link: popupWithSertifOpenButton.src,
+    name: popupWithSertifOpenButton.alt,
+  });  
+})
+
+platesSvg.addEventListener("click", (evt) => {
+  popupHeatEx.open(initialHeatEx[evt.target.dataset.to]);
+  console.log(initialHeatEx[evt.target.dataset.to]);
+});
+
 
 const wowAnimation = new WOW({
   boxClass:     'wow',      // animated element css class (default is wow)
@@ -57,13 +112,14 @@ const wowAnimation = new WOW({
 });
 wowAnimation.init();
 
+
 const commercOffersSlider  = new Swiper('.khan__book-container', {
         direction: 'horizontal',
         effect: 'slide',
         speed: 700,
         preloadImages: false,
         //lazy: true,
-        //zoom: true,
+        zoom: true,
         cssMode: false,
         mousewheel: false,
 

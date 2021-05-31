@@ -15,7 +15,25 @@
     align-items: center;
     justify-content: center;
 
-
+    z-index: 22;
 }
 
 
+.popup__to-name {
+    margin: 0;
+    color: #FF5E3A;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.popup__to-desc {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 73px 0 0;
+
+    max-width: 495px;
+}
+
+.popup__to-3dlink {
+    position: relative;
+}

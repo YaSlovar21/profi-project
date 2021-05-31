@@ -1,0 +1,48 @@
+.list {
+    margin: 0;
+    list-style-type: none;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.list__heading_size_24 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.list__item {
+    position: relative;
+    line-height: 1.4;
+}
+
+
+
+.list__item_font_24 {
+    font-size: 24px;
+}
+
+.list__item_font_18 {
+    font-size: 18px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .list__item {
+        font-size: 18px;
+    }
+}
+
+.list__item_theme_dark {
+    color: #f2f2f2;
+}
+
+.list__item::before {
+    position: relative;
+    content: '\002713';
+    /*font-size: 20px;*/
+    font-weight: 600;
+    color: #FF5E3A;
+    right: 5px;
+}
+

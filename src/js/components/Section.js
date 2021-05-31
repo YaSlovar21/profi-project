@@ -2,7 +2,6 @@ export default class Section {
 
     constructor({data, renderer}, cardlistSelector) {
         this._renderedItems = data;
-        console.log(document.querySelector(cardlistSelector));
         this._container = document.querySelector(cardlistSelector);
         this._renderer = renderer;
     }

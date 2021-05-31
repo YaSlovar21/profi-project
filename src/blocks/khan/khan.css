@@ -18,7 +18,7 @@
 .khan__list-item {
     margin: 15px 5px 15px 0;
     list-style-type: none;
-    background-color: #f2f2f22d;
+    background-color: #9999992d;
     font-size: 16px;
     font-weight: normal;
     line-height: 20px;
@@ -32,7 +32,7 @@
     transition: opacity 1s ease-in-out, color 1s ease-in-out; 
     opacity: 1;
 
-    color: #d6d6d6;
+    color: #0a0a0a;
 
     position: relative;
 }
