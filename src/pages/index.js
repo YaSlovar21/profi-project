@@ -150,5 +150,5 @@ const commercOffersSlider  = new Swiper('.khan__book-container', {
           }
         },
 });
-commercOffersSlider.init();
+//commercOffersSlider.init();
 
