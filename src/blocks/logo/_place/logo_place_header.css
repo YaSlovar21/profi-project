@@ -2,12 +2,17 @@
     position: absolute;
     top: 30px;
     left: 64px;
-    width: 200px;
+    width: 130px;
+  }
+
+.logo_place_footer {
+
+    width: 130px;
   }
 
   @media screen and (max-width:768px) {
     .logo_place_header {
-      width: 80%;
+      /*width: 80%;*/
       left: 18px;
     }
   }

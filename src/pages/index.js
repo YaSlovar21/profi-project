@@ -1,5 +1,6 @@
 import Swiper from 'swiper/bundle';
 import WOW from 'wow.js';
+import anime from 'animejs/lib/anime.es.js';
 
 import Section from '../js/components/Section.js';
 import Card from '../js/components/Card.js';
@@ -13,6 +14,8 @@ import PopupWithImage from '../js/components/PopupWithImage.js';
 import 'swiper/swiper-bundle.css';
 import 'animate.css';
 import '../pages/index.css';
+
+
 
 import {
   //данные проектов
@@ -152,3 +155,23 @@ const commercOffersSlider  = new Swiper('.khan__book-container', {
 });
 //commercOffersSlider.init();
 
+
+function randomValues() {
+  let el = document.querySelectorAll('.honeycomb path');
+  anime({
+    targets: [el],
+    fill: function() {
+    let a = anime.random(0, 4);
+    if (a == 0) {
+      return '#ff5e3a'
+    } else {
+      return 'rgba(50,50,50,0.7)'
+    }
+    },
+    easing: 'easeInOutQuad',
+    duration: 1400,
+    complete: randomValues
+  });
+}
+
+randomValues();

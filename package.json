@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "animejs": "^3.2.1",
     "core-js": "^3.12.1",
     "swiper": "^6.6.2",
     "wow.js": "^1.2.2"

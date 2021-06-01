@@ -1,6 +1,6 @@
-import zatonUfa from '../../images/ufa_zaton.png';
-import timashevskCondit from '../../images/timashevsk_condit.png';
-import ufaUmnDom from '../../images/ufa_umn_dom.png';
+import zatonUfa from '../../images/projects/ufa_zaton.png';
+import timashevskCondit from '../../images/projects/timashevsk_condit.png';
+import ufaUmnDom from '../../images/projects/ufa_umn_dom.png';
 
 import ti077Img from '../../images/descTO/ti077.png';
 

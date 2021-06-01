@@ -87,7 +87,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: #f2f2f2;
 }
 
 .projects__item-description {
@@ -104,6 +104,12 @@
     width: 100%;
     cursor: pointer;
     transition: all .2s ease-in;
+
+    max-height: 260px;
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 2;
 }
 
 .projects__item::after {
@@ -118,6 +124,7 @@
     transform: skew(-20deg);
 
     transition: all .4s ease-in;
+    z-index: 1;
 }
 
 .projects__image:hover {
