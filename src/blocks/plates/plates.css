@@ -1,6 +1,7 @@
 .plates {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 @media screen and (max-width:1024px) {
@@ -53,9 +54,9 @@
     z-index: 4;
     position: absolute;
       /*left: 15%;*/
-      bottom: -13%;
+      bottom: -15%;
       width: 15.58%;
-      padding-top: 6%;
+      padding-top: 3%;
       transform-origin: right;
       transform: skewY(20deg);
       border-radius: 0 4px 4px 4px;
@@ -87,14 +88,14 @@
     z-index: 5;
     /*width: 140px;
     height: 40px;*/
-    width: 8vw;
-    height: calc(0.29 * 8vw);
+    width: 7vw;
+    height: calc(0.29 * 7vw);
     background-image: url(../../images/svg-teplohit.svg);
     background-repeat: no-repeat;
     background-size: contain;
     /*transform: skewY(-20.5deg);*/
     
-    bottom: -2%;
+    bottom: -10%;
     /*left: 15%;*/
     animation: l .9s cubic-bezier(.47,0,.65,.78) both .9s;
   }

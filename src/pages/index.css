@@ -136,5 +136,8 @@
 @import url(../blocks/popup/__to-info/popup__to-info.css); /*контейнер для ТО + описание со ссылками справа*/
 @import url(../blocks/popup/__to-img/popup__to-img.css);
 @import url(../blocks/popup/__desc-container/popup__desc-container.css);
+@import url(../blocks/popup/__to-name/popup__to-name.css);
+@import url(../blocks/popup/__to-desc/popup__to-desc.css);
+@import url(../blocks/popup/__to-3dlink/popup__to-3dlink.css);
 
 @import url(../blocks/list/list.css);
