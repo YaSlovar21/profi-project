@@ -4,6 +4,8 @@ import ufaUmnDom from '../../images/projects/ufa_umn_dom.png';
 
 import ti077Img from '../../images/descTO/ti077.png';
 
+export const callbackFormId = 'mdoygyzz';
+
 export const initialProjects = [
     {
       name: "Котельная в квартале 34, г. Уфа, жилой район «Затон-Восточный»",
@@ -108,6 +110,9 @@ export const popupImageSelector = '.popup-viewport';
 export const callBackPopupSelector = '.popup-callback';
 export const popupWithToSelector = '.popup-to';
 
+//формы
+export const formCallBack= document.forms.formCallBack;
+export const callbackSubmitButton = formCallBack.querySelector('.popup__button-save');
 
 //кнопки открытия модальных окон
 export const callBackPopupOpenButton = document.querySelector('.popup-callback-button');
@@ -129,4 +134,12 @@ export const popupToConfig = {
   popupImageNameSelector: '.popup__to-name', 
   popupImageDescSelector: '.popup__to-desc', 
   popupImageLink3dSelector: '.popup__to-3dlink',
+}
+
+export const formValidatorConfig = {
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__button-save',
+  inactiveButtonClass: 'popup__button-save_disabled',
+  inputErrorClass: 'popup__input_type_error',
+  errorClass: 'popup__input-error_visible'
 }

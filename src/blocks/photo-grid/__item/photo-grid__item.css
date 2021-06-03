@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     position: relative;
+    cursor:zoom-in;
 }
 
 .photo-grid__item::after {

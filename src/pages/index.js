@@ -5,16 +5,16 @@ import anime from 'animejs/lib/anime.es.js';
 import Section from '../js/components/Section.js';
 import Card from '../js/components/Card.js';
 
-//import FormValidator from '../js/components/FormValidator.js';
+import FormValidator from '../js/components/FormValidator.js';
 import PopupWithForm from '../js/components/PopupWithForm.js';
 //import PopupConfirm from '../js/components/PopupConfirm.js';
 import PopupWithHeatEx from '../js/components/PopupWithHeatEx.js';
 import PopupWithImage from '../js/components/PopupWithImage.js';
+import Api from '../js/components/Api.js';
 
 import 'swiper/swiper-bundle.css';
 import 'animate.css';
 import '../pages/index.css';
-
 
 
 import {
@@ -38,8 +38,29 @@ import {
   //конфиги
   popupImageSelectorsCongig,
   popupToConfig,
+  formValidatorConfig,
+
+
+  //идентификатор Formspree формы обратного звонка
+  callbackFormId,
+  formCallBack,
+  callbackSubmitButton,
 } from '../js/utils/constants.js';
 
+import {
+  renderLoading
+} from'../js/utils/utils.js';
+
+
+const formValidatorCallBack = new FormValidator(formValidatorConfig, formCallBack);
+formValidatorCallBack.enableValidation();
+
+const formApi = new Api({
+  baseUrl: 'https://formspree.io',
+  headers: {
+    'Accept': 'application/json'
+  },
+}); 
 
 function createCard(item) {
   const card = new Card({
@@ -74,10 +95,23 @@ const popupHeatEx = new PopupWithHeatEx(popupToConfig, popupWithToSelector);
 
 const popupCallBack = new PopupWithForm({
   formSubmitHandler: (formCallbackData) => {
-
+    const name = formCallbackData.name;
+    const tel = formCallbackData.tel;
+    renderLoading(true, callbackSubmitButton, 'Отправить', 'Отправка...'); //вынести фразы в отдельный объект? elem: profileSubmBut, onLoadText:' ....
+    formApi.sendCallForm(name, tel, callbackFormId)
+      .then((response) => {
+        console.log(response)
+        popupCallBack.close();
+        //сделать сообщение об успешной отправке
+      })
+      .catch((err) => console.log(err)) //сделать сообщение об успешной ошибке
+      .finally(() => {
+        formValidatorCallBack.disableSaveButton();
+        renderLoading(false, callbackSubmitButton, 'Отправить', 'Отправка...');
+      });
   },
   formCleanError: () => {
-
+    formValidatorCallBack.cleanAllErrors();
   },
 }, callBackPopupSelector)
 
@@ -165,7 +199,7 @@ function randomValues() {
     if (a == 0) {
       return '#ff5e3a'
     } else {
-      return 'rgba(50,50,50,0.7)'
+      return '#d4d4d4'
     }
     },
     easing: 'easeInOutQuad',
@@ -175,3 +209,13 @@ function randomValues() {
 }
 
 randomValues();
+
+document.querySelectorAll('.photo-grid__item').forEach((item) => {
+  item.addEventListener("click", (evt) => {
+    console.log(evt.target);
+    popupImage.open({
+      link: evt.target.querySelector('.photo-grid__image').src,
+      name: evt.target.querySelector('.photo-grid__image').alt,
+    });
+  });
+});

@@ -13,7 +13,7 @@
 
   <div>
     <header class="header">
-      <div class="honeycomb" style="opacity: 0.9; transform: scaleY(-1); height: 100vh; max-width: 100%; position: absolute;top: 0;right: 0;">
+      <div class="honeycomb" style="opacity: 1; transform: scaleY(-1); height: 100vh; max-width: 100%; position: absolute;top: 0;right: 0;">
         <svg style="position: absolute; bottom:0; right:0;" width="785" height="1102" viewBox="0 0 785 1102" fill="none" xmlns="http://www.w3.org/2000/svg">
           <style>
           path {
@@ -597,13 +597,13 @@
       <section>
         <h2 class="section-title">Фотогалерея производства теплообменников</h2>
         <div class="photo-grid">
-          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_right" src="<%=require('./images/prod-big-1.jpg')%>"></figure>
-          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_center" src="<%=require('./images/metall-cut-big.png')%>"></figure>
-          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_right" src="<%=require('./images/grospiron.png')%>"></figure>
-          <figure class="photo-grid__item"><img class="photo-grid__image" src="<%=require('./images/press-plast-ready.jpg')%>"></figure>
-          <figure class="photo-grid__item"><img class="photo-grid__image" src="<%=require('./images/press-plast-zag.jpg')%>"></figure>
-          <figure class="photo-grid__item"><img class="photo-grid__image" src="<%=require('./images/metall-cut.jpg')%>"></figure>
-          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_center" src="<%=require('./images/3-to-small-to-big.jpg')%>"></figure>
+          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_right" alt="Процесс сборки пластинчатого теплообменника"  src="<%=require('./images/prod-big-1.jpg')%>"></figure>
+          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_center" alt="Резка ленты" src="<%=require('./images/metall-cut-big.png')%>"></figure>
+          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_right" alt="Пищевой пластинчатый теплообменник для производства мороженого" src="<%=require('./images/grospiron.png')%>"></figure>
+          <figure class="photo-grid__item"><img class="photo-grid__image" alt="Формовка пластины теплообменника"  src="<%=require('./images/press-plast-ready.jpg')%>"></figure>
+          <figure class="photo-grid__item"><img class="photo-grid__image" alt="Производство заготовки пластины теплообменника" src="<%=require('./images/press-plast-zag.jpg')%>"></figure>
+          <figure class="photo-grid__item"><img class="photo-grid__image" alt="Лазерная гравировка (идентификация партии металла)" src="<%=require('./images/metall-cut.jpg')%>"></figure>
+          <figure class="photo-grid__item"><img class="photo-grid__image photo-grid__image_position_center"  alt="Готовые к отгрузке пластинчатые теплообменники в цехе" src="<%=require('./images/3-to-small-to-big.jpg')%>"></figure>
         </div>
       </section>
     <section class="up-footer">
@@ -640,18 +640,25 @@
     </footer>
   </div>
 
-  <!--Форма обратного звонка-->
+  <!--Форма обратного звонка  -->
   <div class="popup popup-callback">
     <div class="popup__container">
         <button class="popup__button-close link-beauty" type="button"></button>
+        
         <form class="popup__form" method="post" action="#" id="formCallBack" name="formCallBack" novalidate>
             <h2 class="popup__title">Заявка на обратный звонок</h2>
-            <input class="popup__input popup__input_type_name" id="name-input" name="name" placeholder="Имя" minlength="2" maxlength="30" required  />
+            <input class="popup__input popup__input_type_name" id="name-input" name="name" placeholder="Имя" minlength="2" maxlength="30" type="text" required  />
             <span class="popup__input-error name-input-error"></span>
-            <input class="popup__input popup__input_type_tel" id="tel-input" name="about" placeholder="Телефон для связи" minlength="2" maxlength="200" required  />
-            <span class="popup__input-error about-input-error"></span>
-            <button class="popup__button-save popup__button-save_type_callback" type="submit">Сохранить</button>
+            <input class="popup__input popup__input_type_tel" id="tel-input" name="tel" placeholder="Телефон для связи" type="tel" minlength="2" maxlength="200" required  />
+            <span class="popup__input-error tel-input-error"></span>
+            <button class="popup__button-save popup__button-save_type_callback" type="submit">Отправить</button>
         </form>
+    </div>
+  </div>  
+
+  <div class="popup popup_lighted">
+    <div class="popup__container">
+      <script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script><iframe src="https://forms.yandex.ru/u/60b21a1b84a77480b7a6b0f3/?iframe=1" frameborder="0" name="ya-form-60b21a1b84a77480b7a6b0f3" width="650"></iframe>
     </div>
   </div>  
 
@@ -693,11 +700,5 @@
       <p class="projects__item-description">Котельная в квартале 34, г. Уфа, жилой район «Затон-Восточный»</p>
     </div>
   </template>
-
-
-	<script>
-					
-	</script>
-
 </body>
 </html>
