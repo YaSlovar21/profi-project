@@ -4,6 +4,7 @@
     background: transparent;
     background-image: url(../../../images/close-icon.svg);
     background-size: contain;
+    background-repeat: no-repeat;
     color: rgb(255, 255, 255);
     position: absolute;
     outline: none;
