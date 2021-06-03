@@ -3,7 +3,7 @@
     height: 36px;
     background: transparent;
     background-image: url(../../../images/close-icon.svg);
-    background-size: cover;
+    background-size: contain;
     color: rgb(255, 255, 255);
     position: absolute;
     outline: none;
