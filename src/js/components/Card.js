@@ -33,7 +33,7 @@ export default class Card {
 
     _setEventListeners() {
       //передадим из индекс коллбэк открытия попапа
-      this._cardImage.addEventListener("click", () => {
+      this._cardImage.addEventListener("mousedown", () => {
         this._handleImageClick(this._name, this._link)
       });
     }

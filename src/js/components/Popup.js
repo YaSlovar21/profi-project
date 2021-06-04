@@ -32,7 +32,7 @@ export default class Popup {
     setEventListeners(){
         this._modal
             .querySelector('.popup__button-close')
-            .addEventListener('click', () => {
+            .addEventListener('mousedown', () => {
                 this.close();
             })
     }
