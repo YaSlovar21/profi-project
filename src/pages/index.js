@@ -121,18 +121,18 @@ popupCallBack.setEventListeners();
 popupHeatEx.setEventListeners();
 
 //навешиваем слушатели на элементы сайта
-callBackPopupOpenButton.addEventListener("click", () => {
+callBackPopupOpenButton.addEventListener("mousedown", () => {
   popupCallBack.open();
 })
 
-popupWithSertifOpenButton.addEventListener("click", () => {
+popupWithSertifOpenButton.addEventListener("mousedown", () => {
   popupImage.open({
     link: popupWithSertifOpenButton.src,
     name: popupWithSertifOpenButton.alt,
   });  
 })
 
-platesSvg.addEventListener("click", (evt) => {
+platesSvg.addEventListener("mousedown", (evt) => {
   popupHeatEx.open(initialHeatEx[evt.target.dataset.to]);
   console.log(initialHeatEx[evt.target.dataset.to]);
 });
@@ -211,7 +211,7 @@ function randomValues() {
 randomValues();
 
 document.querySelectorAll('.photo-grid__item').forEach((item) => {
-  item.addEventListener("click", (evt) => {
+  item.addEventListener("mousedown", (evt) => {
     console.log(evt.target);
     popupImage.open({
       link: evt.target.querySelector('.photo-grid__image').src,
