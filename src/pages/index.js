@@ -15,7 +15,7 @@ import Api from '../js/components/Api.js';
 import 'swiper/swiper-bundle.css';
 import 'animate.css';
 import '../pages/index.css';
-
+import '../pages/CNAME';
 
 import {
   //данные проектов
@@ -189,26 +189,41 @@ const commercOffersSlider  = new Swiper('.khan__book-container', {
 });
 //commercOffersSlider.init();
 
+let pageY= 0;
+let isPlaying = 1;
 
+const el = document.querySelectorAll('.honeycomb path');
 function randomValues() {
-  let el = document.querySelectorAll('.honeycomb path');
-  anime({
-    targets: [el],
-    fill: function() {
-    let a = anime.random(0, 4);
-    if (a == 0) {
-      return '#ff5e3a'
-    } else {
-      return '#d4d4d4'
-    }
-    },
-    easing: 'easeInOutQuad',
-    duration: 1400,
-    complete: randomValues
-  });
+  if (pageY<300){
+    anime({
+      targets: [el],
+      fill: function() {
+        let a = anime.random(0, 4);
+        if (a == 0) {
+            return '#ff5e3a'
+          } else {
+            return '#d4d4d4'
+          }
+        },
+      easing: 'easeInOutQuad',
+      duration: 1400,
+      complete: randomValues,
+    });
+  }
 }
-
 randomValues();
+
+window.addEventListener('scroll', function() {
+  pageY = pageYOffset;
+  if (pageY > 300 && isPlaying) {
+    isPlaying = 0;
+  } 
+  if (pageY < 300 && !isPlaying) {
+    randomValues();
+    isPlaying = 1;
+  }
+});
+
 
 document.querySelectorAll('.photo-grid__item').forEach((item) => {
   item.addEventListener("mousedown", (evt) => {

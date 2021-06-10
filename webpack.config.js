@@ -28,12 +28,19 @@ module.exports = {
         // при обработке этих файлов нужно использовать babel-loader
         use: 'babel-loader',
         // исключает папку node_modules, файлы в ней обрабатывать не нужно
-        //exclude: '/node_modules/'
+        exclude: '/node_modules/'
       },
       {
         // регулярное выражение, которое ищет все файлы с такими расширениями
         test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
         type: 'asset/resource'
+      },
+      {
+        test: /CNAME/,
+        loader: 'file-loader',
+        options: {
+          name: '[name]',
+        },
       },
       {
         // применять это правило только к CSS-файлам
