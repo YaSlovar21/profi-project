@@ -161,21 +161,25 @@
     display: none;
     width: 100%;
   }
-  .nav__ul-item:hover .nav__submenu {
-    display: flex;
+  .nav__ul-item_mouseovered .nav__submenu {
+    display: block;
     -webkit-transform: scaleY(1);
     -ms-transform: scaleY(1);
     transform: scaleY(1);
   }
 }
-/*Заменить на nav__ul-item_hovered .nav__submenu !!!!!!!*/
+/*Заменить на nav__ul-item_hovered .nav__submenu !!!!!!!
 .nav__ul-item:hover .nav__submenu {
     -webkit-transform: scaleY(1);
     -ms-transform: scaleY(1);
     transform: scaleY(1);
   }
-
-
+*/
+.nav__ul-item_mouseovered .nav__submenu {
+  -webkit-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  transform: scaleY(1);
+}
 
 .nav__sub-ul-item {
     display: flex;

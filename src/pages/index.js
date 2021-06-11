@@ -4,6 +4,7 @@ import anime from 'animejs/lib/anime.es.js';
 
 import Section from '../js/components/Section.js';
 import Card from '../js/components/Card.js';
+import Menu from '../js/components/Menu.js';
 
 import FormValidator from '../js/components/FormValidator.js';
 import PopupWithForm from '../js/components/PopupWithForm.js';
@@ -45,6 +46,7 @@ import {
   callbackFormId,
   formCallBack,
   callbackSubmitButton,
+  menuConfig,
 } from '../js/utils/constants.js';
 
 import {
@@ -52,8 +54,15 @@ import {
 } from'../js/utils/utils.js';
 
 
+
 const formValidatorCallBack = new FormValidator(formValidatorConfig, formCallBack);
 formValidatorCallBack.enableValidation();
+
+const menu = new Menu(menuConfig);
+menu.setEventListeners();
+
+const mobileMenuButton = document.querySelector('.nav-mobile-logo');
+mobileMenuButton.addEventListener('click', () => menu.mobileOpen());
 
 const formApi = new Api({
   baseUrl: 'https://formspree.io',
@@ -233,4 +242,28 @@ document.querySelectorAll('.photo-grid__item').forEach((item) => {
       name: evt.target.querySelector('.photo-grid__image').alt,
     });
   });
+});
+
+/* Код карты партнеров */
+let partners = document.querySelectorAll('.map__list-item');
+const dinamic_info = document.querySelector('.map__partner');
+const dinamic_info_popup = document.querySelector('.map__popup');
+const dinamic_info_popup_container = document.querySelector('.map__popup-container');
+
+const popup_close_button = document.querySelector(".map__popup-close");
+
+for (let i=0; i<partners.length; i++) {
+  partners[i].addEventListener('click', function (element) {
+  let info = this.getAttribute('data-html');
+  //.innerHTML =  +' '+this.top + ' '+ this.left;
+  dinamic_info_popup_container.innerHTML= '<div class="animate__animated animate__fadeInUp">'+info+'</div>';
+  dinamic_info_popup.classList.add('map__popup_opened'); 
+  this.classList.add('map__list-item_active');
+  });
+}
+
+popup_close_button.addEventListener('click', function (element) {
+  dinamic_info_popup.classList.remove('map__popup_opened');
+  let map_active = document.querySelector('.map__list-item_active')
+  map_active.classList.remove('map__list-item_active');
 });

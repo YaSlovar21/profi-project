@@ -105,6 +105,11 @@ export const cardsContainerSelector = '.projects__items';
 //template карточки проекта
 export const cardTemplateSelector = "#project-template";
 
+export const partnersSectionConfig = {
+  containerSelector: '.map',
+  itemTemplateSelelector: '#partner-item-template',
+}
+
 //селекторы модальных окон
 export const popupImageSelector = '.popup-viewport';
 export const callBackPopupSelector = '.popup-callback';
@@ -122,6 +127,12 @@ export const popupWithSertifOpenButton = document.querySelector('.about__doc');
 export const platesSvg = document.querySelector('.plates__svg');
 
 //конфиги
+
+export const menuConfig = {
+  navSelector: '.nav',
+  navItemClass: 'nav__ul-item',
+}
+
 
 // конфиг селекторов в модальном окне с картиной и подписью
 export const popupImageSelectorsCongig = {
@@ -143,3 +154,4 @@ export const formValidatorConfig = {
   inputErrorClass: 'popup__input_type_error',
   errorClass: 'popup__input-error_visible'
 }
+

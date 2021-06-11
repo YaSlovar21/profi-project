@@ -141,5 +141,6 @@
 @import url(../blocks/popup/__to-3dlink/popup__to-3dlink.css);
 
 @import url(../blocks/list/list.css);
-
+/*тест блоков термоблок*/
 @import url(../blocks/nav/nav.css);
+@import url(../blocks/map/map.css);
