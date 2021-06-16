@@ -5,6 +5,7 @@ import anime from 'animejs/lib/anime.es.js';
 import Section from '../js/components/Section.js';
 import Card from '../js/components/Card.js';
 import Menu from '../js/components/Menu.js';
+import Partner from '../js/components/Partner.js';
 
 import FormValidator from '../js/components/FormValidator.js';
 import PopupWithForm from '../js/components/PopupWithForm.js';
@@ -22,7 +23,8 @@ import {
   //данные проектов
   initialProjects,
   initialHeatEx,
-  
+  initialPartners,
+
   cardsContainerSelector, //селектор секции куда грузятся карточки 
   cardTemplateSelector,   //шаблон карточки
 
@@ -47,12 +49,27 @@ import {
   formCallBack,
   callbackSubmitButton,
   menuConfig,
+
+  partnersSectionConfig,
 } from '../js/utils/constants.js';
 
 import {
   renderLoading
 } from'../js/utils/utils.js';
 
+
+initialPartners.sort(function(a,b) {
+  const aSecondName = a.name.toLowerCase();
+  const bSecondName = b.name.toLowerCase();
+  if (aSecondName > bSecondName) return 1;
+  if (aSecondName < bSecondName) return -1;
+  return 0;
+});
+
+const mapSection = document.querySelector('.map');
+const mapList = mapSection.querySelector('.map__list');
+const dinamicInfoPopup = mapSection.querySelector('.map__popup');
+const popupInfoCloseButton = dinamicInfoPopup.querySelector(".map__popup-close");
 
 
 const formValidatorCallBack = new FormValidator(formValidatorConfig, formCallBack);
@@ -87,6 +104,21 @@ function createCard(item) {
   return cardToAdd;
 }
 
+function createPartner(dataJson) {
+  const partner = new Partner({
+    name: dataJson.name,
+    htmlData: dataJson.htmlData,
+    classActive: partnersSectionConfig.activeClass,
+    handleItemClick: (dataHtml) => {
+      //(desc, link) передаем во внутреннем методе карточки
+      popupInfoOpen(dataHtml);    
+    },
+  }, partnersSectionConfig.itemTemplateSelelector);
+  const partnerToAdd = partner.generatePartner()
+  return partnerToAdd;
+}
+
+
 const projectList = new Section({
   data: initialProjects,
   renderer: (item) => {
@@ -96,7 +128,20 @@ const projectList = new Section({
     projectList.setItem(card);
   }
 }, cardsContainerSelector);
+
 projectList.renderItems();
+
+
+
+const partnerList = new Section({
+  data: initialPartners,
+  renderer: (itemData) => {
+    const partner = createPartner(itemData);
+    partnerList.setItem(partner);
+  }
+}, partnersSectionConfig.containerSelector);
+
+partnerList.renderItems();
 
 
 const popupImage = new PopupWithImage(popupImageSelectorsCongig, popupImageSelector);
@@ -244,26 +289,31 @@ document.querySelectorAll('.photo-grid__item').forEach((item) => {
   });
 });
 
-/* Код карты партнеров */
-let partners = document.querySelectorAll('.map__list-item');
-const dinamic_info = document.querySelector('.map__partner');
-const dinamic_info_popup = document.querySelector('.map__popup');
-const dinamic_info_popup_container = document.querySelector('.map__popup-container');
 
-const popup_close_button = document.querySelector(".map__popup-close");
+/*Карта партнеров*/
 
-for (let i=0; i<partners.length; i++) {
-  partners[i].addEventListener('click', function (element) {
-  let info = this.getAttribute('data-html');
-  //.innerHTML =  +' '+this.top + ' '+ this.left;
-  dinamic_info_popup_container.innerHTML= '<div class="animate__animated animate__fadeInUp">'+info+'</div>';
-  dinamic_info_popup.classList.add('map__popup_opened'); 
-  this.classList.add('map__list-item_active');
-  });
+const dinamicInfoPopupContainer = dinamicInfoPopup.querySelector('.map__popup-container');
+
+function popupInfoOpen(dataHtml) {
+  if (dataHtml) {
+    const partnerEl = dataHtml.map(el => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('map__container-li');
+      listItem.textContent = el;
+      return listItem;
+    });
+    partnerEl[0].setAttribute('style','font-weight:bold; margin-bottom:10px;');
+    //dinamicInfoPopupContainer.innerHTML= '<div class="animate__animated animate__fadeInUp">'+dataHtml+'</div>';
+    dinamicInfoPopupContainer.prepend(...partnerEl);
+  }
+  dinamicInfoPopup.classList.add('map__popup_opened'); 
 }
 
-popup_close_button.addEventListener('click', function (element) {
-  dinamic_info_popup.classList.remove('map__popup_opened');
-  let map_active = document.querySelector('.map__list-item_active')
-  map_active.classList.remove('map__list-item_active');
+popupInfoCloseButton.addEventListener('click', function () {
+  dinamicInfoPopup.classList.remove('map__popup_opened');
+  dinamicInfoPopupContainer.innerHTML ='';
+  let mapActive = mapList.querySelector('.map__list-item_active')
+  if (mapActive) {
+    mapActive.classList.remove('map__list-item_active');
+  }
 });

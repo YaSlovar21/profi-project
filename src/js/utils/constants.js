@@ -96,6 +96,18 @@ export const initialHeatEx = {
   },
 }
 
+export const initialPartners = [
+  {
+    name: 'Чита',
+    htmlData: ['ООО \"Интерсервис\"']
+  },
+  {
+    name: 'Архангельск',
+    htmlData: ['ООО \"Теплогазстрой\"', '+7(234)234-123'],
+  },
+
+
+]
 
 export const ESC_CODE = 'Escape';
 
@@ -106,8 +118,9 @@ export const cardsContainerSelector = '.projects__items';
 export const cardTemplateSelector = "#project-template";
 
 export const partnersSectionConfig = {
-  containerSelector: '.map',
+  containerSelector: '.map__list',
   itemTemplateSelelector: '#partner-item-template',
+  activeClass: 'map__list-item_active',
 }
 
 //селекторы модальных окон
