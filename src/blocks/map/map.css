@@ -75,6 +75,7 @@
 
 .map__container-li {
     list-style: none;
+    animation: fadeInUp 0.4s linear;
 }
 
 .map__popup-container a {
