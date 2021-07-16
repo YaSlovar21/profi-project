@@ -15,12 +15,9 @@
     position: relative;
     justify-content: flex-end;
     align-items:center;
-
-    margin-bottom: 40px;
     max-width: 1000px;
 
-    /*padding-left: 5% 15% 10% 15%;*/
-
+    padding: 1%;
     width: 100%;
 }
 
@@ -29,6 +26,12 @@
     background-color: #2f2f2f;
     color: white;
     flex: 0 0 550px;
+}
+
+@media screen and (max-width: 1440px) {
+    .plates__description {
+      flex: 0 0 330px;
+    }
 }
 
 .plates__description-title {
@@ -40,6 +43,12 @@
     color: white;
 }
 
+@media screen and (max-width: 1440px) {
+  .plates__description-title {
+    font-size: 24px;
+  }
+}
+
 .plates__description-text {
     font-style: normal;
     font-weight: normal;
@@ -49,6 +58,11 @@
     padding: 20px;
 }
 
+@media screen and (max-width: 1440px) {
+  .plates__description-text {
+    font-size: 18px;
+  }
+}
 
 .illustration__stripe-green {
     z-index: 4;

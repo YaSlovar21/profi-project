@@ -1,0 +1,15 @@
+.logotel__text {
+    margin: 0;
+
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+    color: #3D3D3D;
+}
+
+@media screen and (max-width:550px) {
+    .logotel__text {
+        font-size: 18px;
+    }
+}

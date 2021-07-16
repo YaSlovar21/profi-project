@@ -51,9 +51,17 @@
         position: static;
         margin-bottom: 20px;
         font-size: 18px;
-        list-style-type: disc;
+        list-style-type: none;
         box-shadow: 0px 0px;
         background-color: initial;
+        max-width: 80%;
+    }
+    .circle__feat::before {
+        position: relative;
+         content: '\002713';
+        font-weight: 600;
+         color: #FF5E3A;
+         right: 5px;
     }
     
 }

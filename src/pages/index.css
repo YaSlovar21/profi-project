@@ -20,6 +20,7 @@
 @import url(../blocks/header/__subtitle/header__subtitle.css);
 @import url(../blocks/header/__title/header__title.css);
 
+@import url(../blocks/logotel/logotel.css);
 
 @import url(../blocks/logo/logo.css);
 @import url(../blocks/logo/_place/logo_place_header.css);
@@ -144,3 +145,8 @@
 /*тест блоков термоблок*/
 @import url(../blocks/nav/nav.css);
 @import url(../blocks/map/map.css);
+
+
+@import url(../blocks/raschet/raschet.css);
+
+@import url(../blocks/beauty-button/beauty-button.css);

@@ -1,0 +1,19 @@
+@import url(./_pos_abs/logotel_pos_abs.css);
+@import url(./__logodiv/logotel__logodiv.css);
+@import url(./__img/logotel__img.css);
+@import url(./__text/logotel__text.css);
+
+.logotel {
+    display: flex;
+    align-items: center;
+    max-width: 395px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:550px) {
+    .logotel {
+        flex-direction: column;
+        max-width: 145px;
+    }
+}

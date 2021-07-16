@@ -1,0 +1,11 @@
+.logotel_pos_abs {
+    position: absolute;
+    top: 30px;
+    left: 64px;
+}
+
+@media screen and (max-width:768px) {
+    .logotel_pos_abs {
+      left: 18px;
+    }
+  }

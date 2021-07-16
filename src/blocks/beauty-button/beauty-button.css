@@ -1,0 +1,51 @@
+.beauty-button {
+    display: flex;
+    max-width: 282px;
+    height: 48px;
+    position: relative;
+    overflow: hidden;
+    transition: all .8s linear;
+}
+
+.beauty-button::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    transform: translate(-180%) skew(-30deg);
+    
+    background-color: #e7451cc2;
+    top:0;
+    left: 0;
+
+    transition: all .6s ease-in-out;
+}
+
+.beauty-button:hover::before {
+    /*transform: translate(500%) skew(-30deg);*/
+    animation: fadeInOutMy2 1.2s linear;
+}
+
+
+/*
+.beauty-button:hover::after,  .beauty-button:hover::before{
+    width: 100%;
+}*/
+
+@keyframes fadeInOutMy2 {
+    0% {
+      transform: skewX(-30deg);
+      left: 0;
+      opacity: 0;
+    }
+    50% {
+      transform: skewX(-30deg);
+      left: 50%;
+      opacity: 1;
+    }
+    100% {
+      transform: skewX(-30deg);
+      left: 90%;
+      opacity: 0;
+    }
+  }

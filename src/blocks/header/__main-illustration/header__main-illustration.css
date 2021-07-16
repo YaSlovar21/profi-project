@@ -2,6 +2,7 @@
     position: absolute;
     bottom: 0px;
     right: 70px;
+    max-height: 90vh;
     /*height: 608px;
     width: 765px;*/
     
@@ -23,7 +24,8 @@
     /*top: 45%; */
     /* top: 40%; */
     right: 0;
-    width: 60%;
+    max-width: 60%;
+    max-height: 530px;
   }
 }
 

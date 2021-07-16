@@ -19,4 +19,11 @@
     }
 }
 
+@media screen and (max-width: 880px) {
+    .circle {
+        background: none;
+    }
+
+    
+}
 

@@ -5,7 +5,8 @@
     max-width: 1184px;*/
     position: relative;
     margin: 10px auto;
-    max-width: 1240px;
+    /*max-width: 1240px;*/
+    max-width: 100%;
     min-height: calc(70vh - 5px);
     display: grid;
     grid-template-columns: repeat(4, 1fr) 2fr 400px;

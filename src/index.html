@@ -27,7 +27,8 @@
   <noscript><div><img src="https://mc.yandex.ru/watch/70729528" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
    /Yandex.Metrika counter -->
   <div>
-    <nav class="nav" style="position: relative; top: 0; background-color: #2f2f2f;">
+    
+    <nav class="nav" style="position: relative; top: 0; background-color: #2f2f2f; display: none;">
       <ul class="nav__menu-links">
         <li class="nav__ul-item"><a class="nav__link" href="/babel.config.js">Главная</a></li>
         <li class="nav__ul-item"><a class="nav__link" href="/babel.config.js">Продукция</a>
@@ -47,6 +48,7 @@
         <li class="nav__ul-item"><a class="nav__link" href="info_main.html">О производителе</a></li>
       </ul>
     </nav>
+    
     <header class="header">
       <div class="honeycomb" style="opacity: 1; transform: scaleY(-1); height: 100vh; max-width: 100%; position: absolute;top: 0;right: 0;">
         <svg style="position: absolute; bottom:0; right:0;" width="785" height="1102" viewBox="0 0 785 1102" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -368,33 +370,16 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M71.5574 1067.15C75.6957 1062.44 79.8339 1057.73 83.9713 1053.02C84.9532 1051.9 86.5593 1051.9 87.5412 1053.02C91.679 1057.73 95.8168 1062.44 99.9555 1067.15C100.937 1068.26 100.937 1070.09 99.9555 1071.21C99.2936 1071.96 98.6318 1072.72 97.9703 1073.47C89.8273 1073.47 81.6848 1073.47 73.5422 1073.47C72.8808 1072.72 72.2193 1071.96 71.5574 1071.21C70.5759 1070.09 70.5759 1068.26 71.5574 1067.15V1067.15Z" stroke="#EBEBEB" stroke-opacity="0.1" stroke-width="2" style="fill: rgb(50, 50, 52);"></path>
           </svg>
         </div>
-        <!--
-      <nav class="nav">
-        <ul class="nav__menu-links">
-          <li class="nav__ul-item"><a class="nav__link nav__link_theme_white" href="#">Главная</a></li>
-          <li class="nav__ul-item"><a class="nav__link nav__link_theme_white" href="#">Продукция</a>
-            <ul class="nav__submenu">
-              <li class="nav__sub-ul-item"><a class="nav__sub-link" href="#">Пластинчатые теплообменники</a></li>
-              <li class="nav__sub-ul-item"><a class="nav__sub-link" href="#">Пищевые теплообменники</a></li>
-              <li class="nav__sub-ul-item"><a class="nav__sub-link" href="#">Блочные тепловые пункты</a></li>
-              <li class="nav__sub-ul-item"><a class="nav__sub-link" href="#">Пастеризационно охладительные установки</a></li>
-            </ul>
-          </li>
-          <li class="nav__ul-item"><a class="nav__link" href="#">Сервис v</a>
-            <ul class="nav__submenu">
-              <li class="nav__sub-ul-item"><a class="nav__sub-link" href="#">Item 1</a></li>
-              <li class="nav__sub-ul-item"><a class="nav__sub-link" href="#">Item 2</a></li>
-            </ul>
-          </li>
-          <li class="nav__ul-item"><a class="nav__link" href="info_main.html">О производителе</a></li>
-        </ul>
-      </nav>
-        -->
-      <img class="logo logo_place_header" src="<%=require('./images/profi_new_logo.svg')%>" alt="Профи">
+        
+      <!--<img class="logo logo_place_header" src="<%=require('./images/profi_new_logo.svg')%>" alt="Профи">-->
+      <div class="logotel logotel_pos_abs">
+        <div class="logotel__logodiv"><img class="logotel__img" src="<%=require('./images/profi_new_logo.svg')%>" alt="Профи"></div>
+        <p class="logotel__text">+7 (383) 292-22-63</p>
+      </div>
       <h1 class="header__title">Пластинчатые теплообменники</h1>
       <p class="header__subtitle">Отечественные пластинчатые теплообменники и пластины от производителя ООО "Термоблок"<br> с доставкой по России <a class="header__link link-beauty" href="#">Подробнее &#8594;</a></p>
       <!--<div class="header__square-pic rotation"></div>-->
-      <img class="header__main-illustration" src="<%=require('./images/header-to-image-2.png')%>" alt="Опять двойка">
+      <img class="header__main-illustration" src="<%=require('./images/header-to-image-2.png')%>" alt="Пластинчатые теплообменники для отопления и гвс, пищевого производства">
     </header>
     <main class="content">
 
@@ -456,12 +441,12 @@
 
       <section class="plates">
         <div class="plates__description">
-          <h3 class="plates__description-title ">От ДУ25 до ДУ250</h3>
+          <h3 class="plates__description-title "><span style="font-size: 24px; font-weight: 500; opacity: 0.7;">от</span> ДУ25 <span style="font-size: 24px; font-weight: 500;opacity: 0.7;">до</span> ДУ250</h3>
           <p class="plates__description-text">Предприятие “Термоблок” разрабатывает и изготавливает пластины и уплотнения. Мы являемся единственным в России производителем пластин ДУ250.</p>
           <p class="plates__description-text">Широкий типоразмерный ряд производимых пластин позволяет изготавливать теплообменники от 5 кВт до 25 мВт как для небольших жилых домов, так и для целых микрорайонов.</p>
         </div>
         <div class="plates__interactive">
-        <div class="illustration__stripe-blue wow"></div>
+        <!--<div class="illustration__stripe-blue wow"></div>-->
         <svg class="plates__svg" viewBox="0 0 1298 476" fill="none" xmlns="http://www.w3.org/2000/svg" style="/*margin-top:30px;*/position:relative;">
           <style>
           .plast:hover {
@@ -470,7 +455,7 @@
                              
                              fill:rgba(39, 39, 39, 0.8);
                              fill: #ff5e3aee;
-                             stroke: #e4e4e4b6;
+                             stroke: #181818b6;
                              cursor: pointer;
                          }
                          .plast {
@@ -527,8 +512,8 @@
           <path d="M1044.86 467.866c-.22.269-.49.486-.81.65-.31.164-.66.246-1.03.246-.49 0-.92-.121-1.29-.363a2.41 2.41 0 01-.85-1.02 3.65 3.65 0 01-.29-1.459c0-.57.1-1.084.32-1.541.22-.457.53-.806.92-1.048.4-.243.87-.364 1.4-.364.84 0 1.51.317 1.99.95.49.628.73 1.488.73 2.578v.316c0 1.66-.33 2.873-.98 3.639-.66.761-1.65 1.152-2.97 1.172h-.21v-.914h.23c.89-.016 1.58-.249 2.06-.698.48-.453.74-1.168.78-2.144zm-1.67 0c.37 0 .7-.112 1.01-.334.3-.223.53-.498.67-.826v-.434c0-.711-.16-1.289-.46-1.734-.31-.446-.7-.668-1.18-.668-.47 0-.85.183-1.14.55-.29.364-.44.844-.44 1.442 0 .582.14 1.062.42 1.441.28.375.65.563 1.12.563zm4.76-.528l.43-4.254h4.37v1.002h-3.45l-.26 2.327c.42-.246.89-.37 1.42-.37.78 0 1.4.258 1.86.774.45.512.68 1.205.68 2.08 0 .879-.24 1.572-.71 2.08-.48.504-1.14.756-1.99.756-.75 0-1.37-.209-1.84-.627-.48-.418-.75-.996-.82-1.734h1.03c.06.488.24.857.52 1.107.28.246.65.369 1.11.369.5 0 .9-.172 1.18-.515.29-.344.44-.819.44-1.424 0-.571-.16-1.028-.47-1.371-.31-.348-.72-.522-1.24-.522-.47 0-.84.104-1.11.311l-.29.234-.86-.223z" fill="#2f2f2f"></path>
           <path d="M1209.27 470.616h-1.09v-7.225l-2.18.803v-.985l3.1-1.166h.17v8.573zm6.74 0h-1.09v-7.225l-2.19.803v-.985l3.11-1.166h.17v8.573zm7.43-8.537v.92h-.2c-.84.015-1.52.265-2.02.75-.5.484-.78 1.166-.86 2.044.45-.515 1.06-.773 1.84-.773.74 0 1.33.262 1.77.785.45.524.67 1.199.67 2.028 0 .878-.24 1.582-.72 2.109-.48.527-1.12.791-1.92.791-.82 0-1.48-.313-1.99-.938-.51-.628-.76-1.437-.76-2.425v-.416c0-1.571.33-2.77 1-3.598.67-.832 1.67-1.258 3-1.277h.19zm-1.42 3.843c-.38 0-.72.112-1.03.334a1.75 1.75 0 00-.65.838v.399c0 .703.16 1.269.47 1.699.32.43.72.644 1.19.644.49 0 .87-.179 1.15-.539.28-.359.42-.83.42-1.412 0-.586-.14-1.058-.43-1.418a1.352 1.352 0 00-1.12-.545z" fill="#2f2f2f"></path>
         </svg>
-        <div class="illustration__stripe-green wow"></div>
-        <div class="illustration__tmb wow"></div>
+        <!--<div class="illustration__stripe-green wow"></div>
+        <div class="illustration__tmb wow"></div>-->
         </div>
       </section>
 
@@ -628,7 +613,97 @@
             </div>
           </div>
       </section>
+      <section class="raschet" >
+        <div style="width: 100%; display: flex; justify-content: space-between;">
+          <div class="raschet__nagrevaemaya">
+            <label class="raschet__head-min raschet__head-min_theme_white">Температура греющей среды <br><span class="raschet__span_type_heat">(на входе)</span></label>
+            <input type="text" name="t_gre_mass" class="raschet__input raschet__input_one" style="margin-bottom: 105px;">
 
+            <label class="raschet__head-min raschet__head-min_theme_white">Температура греющей среды <br><span class="raschet__span_type_heat">(на выходе)</span></label>
+            <input type="text" name="t_gre_mass" class="raschet__input raschet__input_one raschet__input_heatout">
+          </div>
+          <img src="<%=require('./images/to_taschet_demo2.svg')%>" class="raschet__image" style="">
+          <div class="raschet__nagrevaemaya">
+            <p class="raschet__head-min raschet__head-min_theme_white">Температура нагреваемой среды <br><span class="raschet__span_type_cold">(на выходе)</span></p>
+            <input type="text" name="t_gre_mass" class="raschet__input raschet__input_one" style="margin-bottom: 105px;">
+            <p class="raschet__head-min raschet__head-min_theme_white">Температура нагреваемой среды <br><span class="raschet__span_type_cold">(на входе)</span></p>
+            <input type="text" name="t_gre_mass" class="raschet__input raschet__input_one">
+          </div>
+        </div>
+        <div style="width: 100%; display: flex; justify-content: space-between;">
+          <fieldset>
+          <p class="raschet__head-min raschet__head-min_theme_white">Тип греющей среды</p>
+          <select class="raschet__input raschet__input_one" name="t_typesr">
+            <option class="raschet__option" value="Вода">Вода</option>
+            <option class="raschet__option" value="Пар">Пар</option>
+            <option class="raschet__option" value="Масло">Масло</option>
+            <option class="raschet__option" value="Этиленгликоль">Этиленгликоль</option>
+            <option class="raschet__option" value="Пропиленгликоль">Пропиленгликоль</option>
+          </select>
+        
+
+        <p class="raschet__head-min raschet__head-min_theme_white">Расход греющей среды</p>
+          <div class="raschet__input_double-columns">
+            <input type="text" name="t_gre_mass" class="raschet__input raschet__mini-input">
+            <select class="raschet__input  raschet__mini-metrica" name="t_typesr">
+              <option class="raschet__option" value="Вода">Квт</option>
+              <option  class="raschet__option" value="Пар">Гкал/ч</option>
+              <option  class="raschet__option" value="Масло">мВт</option>
+            </select>
+          </div>
+
+
+          <p class="raschet__head-min raschet__head-min_theme_white">Мощность (тепловая нагрузка)</p>
+          <div class="raschet__input_double-columns">
+            <input type="text" name="t_gre_mass" class="raschet__input raschet__mini-input">
+            <select class="raschet__input  raschet__mini-metrica" name="t_typesr">
+              <option class="raschet__option" value="Вода">Квт</option>
+              <option  class="raschet__option" value="Пар">Гкал/ч</option>
+              <option  class="raschet__option" value="Масло">мВт</option>
+            </select>
+          </div>
+        
+        </fieldset>
+        
+        <fieldset>
+
+          <p class="raschet__head-min raschet__head-min_theme_white">Тип нагреваемой среды</p>
+          <select class="raschet__input raschet__input_one" name="t_typesr">
+                  <option  class="raschet__option" value="Вода">Вода</option>
+                  <option  class="raschet__option" value="Пар">Пар</option>
+                  <option  class="raschet__option" value="Масло">Масло</option>
+                  <option  class="raschet__option" value="Этиленгликоль">Этиленгликоль</option>
+                  <option  class="raschet__option" value="Пропиленгликоль">Пропиленгликоль</option>
+          </select>
+          
+          
+          <p class="raschet__head-min raschet__head-min_theme_white">Расход нагреваемой среды</p>
+          <div class="raschet__input_double-columns">
+            <input type="text" name="t_gre_mass" class="raschet__input raschet__mini-input">
+            <select class="raschet__input raschet__mini-metrica" name="t_typesr">
+              <option class="raschet__option" value="Вода">Квт</option>
+              <option class="raschet__option" value="Пар">Гкал/ч</option>
+              <option class="raschet__option" value="Масло">мВт</option>
+            </select>
+          </div>
+
+          <div class="beauty-button"><a href="#" class="po__link" style="    margin-top: 25px;
+            font-size: 18px;
+            font-weight: normal;
+            color: #d6d6d6;
+            position: relative;
+            padding: 15px 25px;
+            background-color: #3a36362d;
+            text-decoration: none;
+            border-right: 1px solid #E7441C;
+            border-left: 1px solid #E7441C;
+            transition: all .8s ease-in-out; width: 100%;font-size: 16px;margin: 0; color: rgb(41, 41, 41);">Рассчитать теплообменник</a></div>
+        </fieldset>
+        </div>
+        
+        </div>
+
+      </section>
       <section>
         <h2 class="section-title">Фотогалерея производства теплообменников</h2>
         <div class="photo-grid">
@@ -697,7 +772,7 @@
       <div class="footer__columns">
         <div class="footer__column footer__column_content_copyright">
           <img class="logo logo_place_footer" src="<%=require('./images/profi_logo_theme_white.svg')%>" alt="Профи">
-          <p class="footer__author">Разработка сайта: Вячеслав Невьянцев &copy; 2021</p>
+          <p class="footer__author">ООО "Профи" &copy; 2021<br><span style="font-size: 11px;">Разработка сайта: Вячеслав Невьянцев</span></p>
         </div>
         <nav class="footer__column footer__column_content_info">
           <h3 class="footer__column-heading">Разделы сайта</h3>

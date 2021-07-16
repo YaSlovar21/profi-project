@@ -1,0 +1,11 @@
+.logotel__logodiv {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 130px;
+}
+
+@media screen and (max-width:550px) {
+    .logotel__logodiv {
+        flex: 0 0 0;
+    }
+}
