@@ -1,8 +1,31 @@
+
+@import url(./__title/khan__title.css);
+@import url(./__quote/khan__quote.css);
+
+
+
+@import url(./__quote-author/khan__quote-author.css);
+@import url(./__quote-author-subline/khan__quote-author-subline.css);
+
+@import url(./__container/khan__container.css);
+@import url(./__buy-link/khan__buy-link.css);
+@import url(./__book-pic/khan__book-pic.css);
+@import url(./__book-container/khan__book-container.css);
+@import url(./__author/khan__author.css);
+
+@import url(./__title/_page_heatex/khan__title_page_heatex.css);
+@import url(./__quote/_page_heatex/khan__quote_page_heatex.css);
+@import url(./__container/_page_heatex/khan__container_page_heatex.css);
+@import url(./__book-container/_page_heatex/khan__book-container_page_heatex.css);
+
+
 .khan {
-    
+    /*background-color: #F2F2F2;*/
     padding-top: 100px;
     padding-bottom: 30px;
   }
+
+
 
 .khan__list {
     display: flex;
@@ -15,11 +38,10 @@
         flex-direction: column;
     }
 }
-
 .khan__list-item {
     margin: 15px 5px 15px 0;
     list-style-type: none;
-    background-color: #9999992d;
+    background-color: #f2f2f22d;
     font-size: 16px;
     font-weight: normal;
     line-height: 20px;
@@ -33,17 +55,11 @@
     transition: opacity 1s ease-in-out, color 1s ease-in-out; 
     opacity: 1;
 
-    color: #0a0a0a;
+    color: #d6d6d6;
 
     position: relative;
 }
 
-@media screen and (max-width:768px) {
-    .khan__list-item {
-        padding: 10px 10px;
-        margin: 5px 0;
-    }
-}
 
 @media screen and (max-width:420px) {
     .khan__list-item {
@@ -59,6 +75,7 @@
 }
 
 
+
 .khan__list-item:hover {
     cursor: pointer;
     color: white;
@@ -71,5 +88,34 @@
     outline: 0px;
   }
 
+/*.khan__list-item::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 30%;
+    background-color: #E7441C;
+    top:0;
+    left: 0;
+
+    transition: all .6s ease-in-out;
+}
+
+.khan__list-item::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 30%;
+    background-color: #E7441C;
+    bottom:0;
+    right: 0;
+
+    transition: all .6s ease-in-out;
+}
+
+
+.khan__list-item:hover::after,  .khan__list-item:hover::before{
+    width: 100%;
+}
+*/
 
 

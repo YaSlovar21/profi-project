@@ -136,13 +136,13 @@
 }
 
 .projects__image_ufa-zaton {
-    background-image: url(../../images/ufa_zaton.png);
+    background-image: url(../../images/ufa_zaton1.png);
 }
 .projects__image_timashevsk-condit {
-    background-image: url(../../images/timashevsk_condit.png);
+    background-image: url(../../images/timashevsk_condit1.png);
 }
 .projects__image_ufa-umn-dom {
-    background-image: url(../../images/ufa_umn_dom.png);
+    background-image: url(../../images/ufa_umn_dom1.png);
 }
 
 .projects__image:hover .projects__object{

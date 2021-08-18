@@ -1,25 +1,12 @@
 .header__subtitle {
     position: absolute;
-    line-height: 1.38;
+    line-height: 25px;
     font-size: 18px;
     font-weight: normal;
-    width: 420px;
+    width: 388px;
     bottom: 30px;
     left: 64px;
     z-index: 1;
     margin: 0;
   }
   
-  @media screen and (max-width: 1025px) {
-    .header__subtitle {
-      font-size: 16px;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .header__subtitle {
-      font-size: 14px;
-      width: 70%;
-      left: 18px;
-    }
-  }

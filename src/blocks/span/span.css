@@ -1,0 +1,18 @@
+.span{
+    color: #c4c4c4ad;
+}
+
+.span_comment {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.span_color_orange {
+    font-weight: 600;
+    color: #E7441C;
+}
+
+.span_uppercase {
+    text-transform: uppercase;
+}

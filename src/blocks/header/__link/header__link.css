@@ -1,4 +1,11 @@
 .header__link {
     text-decoration: none;
-    color: #2F80ED; 
+    color: #a8a8a8; 
+    font-weight: 400;
+    margin-left: 15px;
+    font-size: 18px;
   }
+
+.header__link:nth-child(1) {
+  color: #FF5E3A;
+}
